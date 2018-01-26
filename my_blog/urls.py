@@ -22,4 +22,8 @@ urlpatterns = [
     path('home/',views.home,name = 'home'),
     url(r'^(?P<id>\d+)/$',views.detail,name = 'detail'),
     path('test/',views.test),
+    path('archives/',views.archives,name = 'archives'),
+    url(r'^(?P<tag>\w+)/$', views.search_tag, name='search_tag'),
+    # path('search/',views.blog_search,name = 'search'),
+    url(r'^search/$', views.blog_search, name='search'),
 ]
